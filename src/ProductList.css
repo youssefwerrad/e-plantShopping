@@ -300,37 +300,229 @@ html {
     animation: pulse 0.3s ease-in-out;
 }
 
-/* Media Queries */
+/* Media Queries - Enhanced Mobile Responsiveness */
 @media (max-width: 1200px) {
     .product-card {
         flex: 1 1 calc(33.33% - 20px);
         max-width: calc(33.33% - 20px);
     }
+
+    .luxury {
+        width: 500px;
+        font-size: 17px;
+    }
+
+    .navbar .ul {
+        width: 900px;
+    }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+    .product-list {
+        gap: 30px;
+    }
+
     .product-card {
         flex: 1 1 calc(50% - 20px);
         max-width: calc(50% - 20px);
     }
+}
 
+@media (max-width: 768px) {
+    /* Navbar Responsive */
     .navbar {
         flex-direction: column;
-        align-items: center;
+        padding: 10px 15px;
+        gap: 15px;
     }
 
     .tag {
-        margin-bottom: 20px;
-        text-align: center;
+        width: 100%;
+        justify-content: center;
     }
 
-    .ul {
-        display: flex;
+    .luxury {
+        width: 100%;
         flex-direction: column;
         gap: 10px;
+        text-align: center;
     }
 
-    .ul div {
-        text-align: center;
+    .luxury img {
+        height: 50px;
+        width: 50px;
+    }
+
+    .luxury h3 {
+        font-size: 20px;
+    }
+
+    .luxury i {
+        font-size: 14px;
+    }
+
+    .navbar .ul,
+    .styleObjUl {
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .styleA,
+    .navbar .ul div a {
+        font-size: 18px !important;
+    }
+
+    .cart svg {
+        height: 50px !important;
+        width: 50px !important;
+    }
+
+    /* Product Grid Responsive */
+    .product-list {
+        gap: 20px;
+        padding: 15px;
+    }
+
+    .product-card {
+        flex: 1 1 calc(50% - 15px);
+        max-width: calc(50% - 15px);
+        padding: 15px;
+    }
+
+    .product-grid h1 {
+        font-size: 26px;
+    }
+
+    .product-title {
+        font-size: 18px;
+    }
+
+    .product-description {
+        font-size: 13px;
+    }
+
+    .product-cost {
+        font-size: 20px;
+    }
+
+    .product-button {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Navbar Mobile */
+    .navbar {
+        padding: 10px;
+    }
+
+    .luxury {
+        font-size: 14px;
+    }
+
+    .luxury h3 {
+        font-size: 18px;
+    }
+
+    .luxury img {
+        height: 40px;
+        width: 40px;
+    }
+
+    .styleA,
+    .navbar .ul div a {
+        font-size: 16px !important;
+    }
+
+    .cart svg {
+        height: 40px !important;
+        width: 40px !important;
+    }
+
+    .cart span {
+        font-size: 12px;
+        padding: 1px 6px;
+        margin-left: 3px;
+    }
+
+    /* Product Grid Mobile */
+    .product-grid {
+        padding: 10px;
+    }
+
+    .product-grid h1 {
+        font-size: 22px;
+        margin: 15px 0;
+    }
+
+    .product-list {
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .product-card {
+        flex: 1 1 100%;
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .product-image {
+        height: 200px;
+    }
+
+    .product-title {
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    .product-description {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+
+    .product-cost {
+        font-size: 22px;
+        padding: 10px;
+    }
+
+    .product-button {
+        width: calc(100% - 20px);
+        margin: 0 10px 10px;
+        padding: 12px;
+        font-size: 15px;
+    }
+
+    /* Remove sale badge on mobile */
+    .product-card::before {
+        font-size: 10px;
+        padding: 3px 6px;
+    }
+}
+
+@media (max-width: 360px) {
+    /* Extra small phones */
+    .product-grid h1 {
+        font-size: 20px;
+    }
+
+    .product-title {
+        font-size: 16px;
+    }
+
+    .product-description {
+        font-size: 13px;
+    }
+
+    .product-cost {
+        font-size: 20px;
+    }
+
+    .product-button {
+        font-size: 14px;
+        padding: 10px;
     }
 }
