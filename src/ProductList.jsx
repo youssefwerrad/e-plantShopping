@@ -8,7 +8,7 @@ import { addItem } from './CartSlice';
 function ProductList({ onHomeClick }) {
     const dispatch = useDispatch();
     const cartItems = useSelector(state => state.cart.items);
-    const [showCart, setShowCart] = useState(false);
+    const [showCart, setShowCart] = useState(true);
     const [showPlants, setShowPlants] = useState(true);
     const [showAboutUs, setShowAboutUs] = useState(false);
     const [addedToCart, setAddedToCart] = useState({});
