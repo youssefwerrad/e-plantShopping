@@ -2,14 +2,16 @@ import React, { useState, useEffect } from 'react';
 import './ProductList.css';
 import CartItem from './CartItem';
 import AboutUs from './AboutUs';
+import AdminPanel from './AdminPanel';
 import { useDispatch, useSelector } from 'react-redux';
 import { addItem } from './CartSlice';
 
 function ProductList({ onHomeClick }) {
     const dispatch = useDispatch();
     const cartItems = useSelector(state => state.cart.items);
-    const [showCart, setShowCart] = useState(true);
-    const [showPlants, setShowPlants] = useState(true);
+    const [showCart, setShowCart] = useState(false);
+    const [showPlants, setShowPlants] = useState(true); // Changed to true - show plants by default
+    const [showAdmin, setShowAdmin] = useState(false);
     const [showAboutUs, setShowAboutUs] = useState(false);
     const [addedToCart, setAddedToCart] = useState({});
 
@@ -22,7 +24,7 @@ function ProductList({ onHomeClick }) {
         setAddedToCart(newAddedToCart);
     }, [cartItems]);
 
-    const plantsArray = [
+    const [plantsArray, setPlantsArray] = useState([
         {
             category: "Air Purifying Plants",
             plants: [
@@ -228,7 +230,7 @@ function ProductList({ onHomeClick }) {
                 }
             ]
         }
-    ];
+    ]);
 
     const styleObj = {
         backgroundColor: '#4CAF50',
@@ -275,6 +277,15 @@ function ProductList({ onHomeClick }) {
         setShowAboutUs(true);
         setShowPlants(false);
         setShowCart(false);
+        setShowAdmin(false);
+    };
+
+    const handleAdminClick = (e) => {
+        e.preventDefault();
+        setShowAdmin(true);
+        setShowPlants(false);
+        setShowCart(false);
+        setShowAboutUs(false);
     };
 
     const handleContinueShopping = (e) => {
@@ -317,6 +328,9 @@ function ProductList({ onHomeClick }) {
                         <a href="#" onClick={(e) => handleAboutUsClick(e)} style={styleA}>About Us</a>
                     </div>
                     <div>
+                        <a href="#" onClick={(e) => handleAdminClick(e)} style={styleA}>Edit</a>
+                    </div>
+                    <div>
                         <a href="#" onClick={(e) => handleCartClick(e)} style={styleA}>
                             <h1 className='cart' style={{ display: 'flex', alignItems: 'center' }}>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" height="68" width="68">
@@ -340,7 +354,7 @@ function ProductList({ onHomeClick }) {
                     </div>
                 </div>
             </div>
-            {!showCart && !showAboutUs ? (
+            {!showCart && !showAboutUs && !showAdmin ? (
                 <div className="product-grid">
                     {plantsArray.map((category, index) => (
                         <div key={index}>
@@ -369,6 +383,15 @@ function ProductList({ onHomeClick }) {
                 </div>
             ) : showCart ? (
                 <CartItem onContinueShopping={handleContinueShopping} />
+            ) : showAdmin ? (
+                <AdminPanel
+                    plantsArray={plantsArray}
+                    setPlantsArray={setPlantsArray}
+                    onClose={() => {
+                        setShowAdmin(false);
+                        setShowPlants(true);
+                    }}
+                />
             ) : (
                 <AboutUs />
             )}
