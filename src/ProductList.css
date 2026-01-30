@@ -418,14 +418,27 @@ html {
     /* Navbar Mobile */
     .navbar {
         padding: 10px;
+        gap: 8px;
+    }
+
+    .tag {
+        width: 100%;
     }
 
     .luxury {
         font-size: 14px;
+        flex-direction: row;
+        gap: 8px;
+        padding: 5px;
     }
 
     .luxury h3 {
-        font-size: 18px;
+        font-size: 16px;
+        margin: 0;
+    }
+
+    .luxury i {
+        font-size: 11px;
     }
 
     .luxury img {
@@ -433,20 +446,54 @@ html {
         width: 40px;
     }
 
-    .styleA,
-    .navbar .ul div a {
-        font-size: 16px !important;
+    /* Mobile Navigation - Make Sure All Links Visible */
+    .navbar div[style*="styleObjUl"],
+    div[style*="width"],
+    .navbar > div:last-child {
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-around !important;
+        align-items: center !important;
+        gap: 10px !important;
+        padding: 10px 5px !important;
+    }
+
+    /* Each navigation link */
+    .navbar a {
+        font-size: 14px !important;
+        padding: 6px 10px !important;
+        white-space: nowrap;
+    }
+
+    /* Cart Icon Mobile - CRITICAL FIX */
+    .cart {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .cart h1 {
+        margin: 0 !important;
+        padding: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        font-size: 14px !important;
     }
 
     .cart svg {
-        height: 40px !important;
-        width: 40px !important;
+        height: 35px !important;
+        width: 35px !important;
+        min-width: 35px !important;
     }
 
     .cart span {
-        font-size: 12px;
-        padding: 1px 6px;
-        margin-left: 3px;
+        font-size: 11px !important;
+        padding: 1px 5px !important;
+        min-width: 16px !important;
+        margin-left: 3px !important;
     }
 
     /* Product Grid Mobile */

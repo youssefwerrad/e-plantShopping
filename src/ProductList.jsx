@@ -263,6 +263,9 @@ function ProductList({ onHomeClick }) {
     const handleCartClick = (e) => {
         e.preventDefault();
         setShowCart(true);
+        setShowPlants(false);
+        setShowAboutUs(false);
+        setShowAdmin(false);
     };
 
     const handlePlantsClick = (e) => {
@@ -270,6 +273,7 @@ function ProductList({ onHomeClick }) {
         setShowPlants(true);
         setShowCart(false);
         setShowAboutUs(false);
+        setShowAdmin(false);
     };
 
     const handleAboutUsClick = (e) => {
@@ -291,6 +295,9 @@ function ProductList({ onHomeClick }) {
     const handleContinueShopping = (e) => {
         e.preventDefault();
         setShowCart(false);
+        setShowPlants(true);
+        setShowAboutUs(false);
+        setShowAdmin(false);
     };
 
     const handleAddToCart = (plant) => {
