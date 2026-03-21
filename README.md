@@ -243,7 +243,7 @@ npm install gh-pages --save-dev
 2. **Update package.json**
 ```json
 {
-  "homepage": "https://YOUR_USERNAME.github.io/e-plantShopping",
+  "homepage": "https://youssefwerrad.github.io/e-plantShopping",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
@@ -340,10 +340,9 @@ This project is open source and available under the MIT License.
 
 ## 👨‍💻 Author
 
-**Your Name**
-- GitHub: [@YOUR_USERNAME](https://github.com/YOUR_USERNAME)
-- LinkedIn: [Your Profile](https://linkedin.com/in/yourprofile)
-- Email: your.email@example.com
+**Youssef Werrad**
+- GitHub: [@youssefwerrad](https://github.com/youssefwerrad)
+- Email: youssefwerrad@gmail.com
 
 ## 🙏 Acknowledgments
 
