@@ -3,15 +3,16 @@
 .admin-panel {
   width: 100%;
   min-height: 100vh;
-  background-color: #f0f0f0;
+  background-color: var(--paper);
   padding: 20px;
+  font-family: var(--font-body);
 }
 
 .admin-header {
-  background-color: #4CAF50;
+  background-color: var(--forest);
   color: white;
   padding: 20px 30px;
-  border-radius: 5px;
+  border-radius: 2px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -26,11 +27,11 @@
 }
 
 .close-btn {
-  background: white;
-  color: #4CAF50;
+  background: var(--paper-raised);
+  color: var(--forest);
   border: 2px solid white;
   padding: 10px 20px;
-  border-radius: 5px;
+  border-radius: 2px;
   cursor: pointer;
   font-size: 16px;
   font-weight: bold;
@@ -38,9 +39,9 @@
 }
 
 .close-btn:hover {
-  background: #45a049;
+  background: var(--forest-deep);
   color: white;
-  border-color: #45a049;
+  border-color: var(--forest-deep);
 }
 
 .admin-actions {
@@ -49,12 +50,12 @@
 }
 
 .add-product-btn {
-  background: #4CAF50;
+  background: var(--forest);
   color: white;
   border: none;
   padding: 15px 40px;
   font-size: 18px;
-  border-radius: 5px;
+  border-radius: 2px;
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -62,19 +63,19 @@
 }
 
 .add-product-btn:hover {
-  background: #45a049;
+  background: var(--forest-deep);
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 /* Add Plant Form */
 .add-plant-form {
-  background: white;
+  background: var(--paper-raised);
   padding: 30px;
-  border-radius: 5px;
+  border-radius: 2px;
   margin-bottom: 30px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  border: 1px solid #ccc;
+  border: 1px solid var(--rule-strong);
   animation: slideDown 0.3s ease;
 }
 
@@ -90,11 +91,11 @@
 }
 
 .add-plant-form h2 {
-  color: #333;
+  color: var(--ink);
   margin-bottom: 20px;
   font-size: 24px;
   font-weight: bold;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid var(--rule-strong);
   padding-bottom: 10px;
 }
 
@@ -105,7 +106,7 @@
 .form-group label {
   display: block;
   margin-bottom: 8px;
-  color: #333;
+  color: var(--ink);
   font-weight: bold;
   font-size: 14px;
 }
@@ -115,37 +116,37 @@
 .form-group select {
   width: 100%;
   padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  border: 1px solid var(--rule-strong);
+  border-radius: 2px;
   font-size: 16px;
   transition: border-color 0.3s ease;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+
 }
 
 .form-group input:focus,
 .form-group textarea:focus,
 .form-group select:focus {
   outline: none;
-  border-color: #4CAF50;
+  border-color: var(--forest);
 }
 
 .image-preview {
   margin-top: 10px;
   max-width: 200px;
   max-height: 200px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+  border-radius: 2px;
+  border: 1px solid var(--rule-strong);
   display: block;
 }
 
 .submit-btn {
-  background: #4CAF50;
+  background: var(--forest);
   color: white;
   border: none;
   padding: 12px 30px;
   font-size: 16px;
-  border-radius: 5px;
+  border-radius: 2px;
   cursor: pointer;
   width: 100%;
   transition: all 0.3s ease;
@@ -153,7 +154,7 @@
 }
 
 .submit-btn:hover {
-  background: #45a049;
+  background: var(--forest-deep);
   transform: translateY(-2px);
 }
 
@@ -163,25 +164,25 @@
 }
 
 .plants-list > h2 {
-  color: #333;
+  color: var(--ink);
   font-size: 28px;
   margin-bottom: 20px;
   padding-bottom: 15px;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid var(--rule-strong);
   font-weight: bold;
 }
 
 .category-section {
-  background: white;
+  background: var(--paper-raised);
   padding: 25px;
-  border-radius: 5px;
+  border-radius: 2px;
   margin-bottom: 25px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  border: 1px solid #ccc;
+  border: 1px solid var(--rule-strong);
 }
 
 .category-section h3 {
-  color: #4CAF50;
+  color: var(--forest);
   font-size: 22px;
   margin-bottom: 20px;
   padding-bottom: 10px;
@@ -197,8 +198,8 @@
 
 .plant-item {
   background: #fff;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  border: 1px solid var(--rule-strong);
+  border-radius: 2px;
   padding: 20px;
   flex: 0 0 calc(33.33% - 20px);
   max-width: calc(33.33% - 20px);
@@ -218,7 +219,7 @@
   width: 100%;
   height: 200px;
   object-fit: cover;
-  border-radius: 5px;
+  border-radius: 2px;
   margin-bottom: 15px;
 }
 
@@ -228,14 +229,14 @@
 }
 
 .plant-info h4 {
-  color: #333;
+  color: var(--ink);
   font-size: 18px;
   margin-bottom: 10px;
   font-weight: bold;
 }
 
 .plant-info p {
-  color: #666;
+  color: var(--ink-soft);
   font-size: 14px;
   line-height: 1.5;
   margin-bottom: 10px;
@@ -243,7 +244,7 @@
 
 .plant-cost {
   display: inline-block;
-  color: #4CAF50;
+  color: var(--forest);
   padding: 5px 10px;
   font-weight: bold;
   font-size: 18px;
@@ -254,7 +255,7 @@
   color: white;
   border: none;
   padding: 10px 15px;
-  border-radius: 5px;
+  border-radius: 2px;
   cursor: pointer;
   font-size: 14px;
   font-weight: bold;

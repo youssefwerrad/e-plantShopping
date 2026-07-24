@@ -1,17 +1,5 @@
-/* App.css - Paradise Nursery Landing Page */
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html, body {
-  overflow-x: hidden;
-  width: 100%;
-  height: 100%;
-  font-family: Arial, sans-serif;
-}
+/* App.css — Paradise Nursery landing hero
+   Split panel: paper-toned copy on the left, framed photograph on the right. */
 
 .app-container {
   position: relative;
@@ -23,107 +11,129 @@ html, body {
 .landing-page {
   position: relative;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: minmax(360px, 46%) 1fr;
+  background: var(--paper);
+}
+
+/* Left panel — copy */
+.landing-panel {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-.landing-page.fade-out {
-  opacity: 0;
-  transform: scale(0.95);
-  pointer-events: none;
-}
-
-/* Background Image */
-.background-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('https://cdn.pixabay.com/photo/2017/07/13/08/59/greenhouse-2499758_1280.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  z-index: 0;
-}
-
-/* Content Overlay */
-.content {
+  padding: 8vw 6vw;
   position: relative;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(0, 0, 0, 0.4);
-  z-index: 1;
 }
 
-/* Landing Content - Centered Card */
-.landing_content {
-  background: rgba(255, 255, 255, 0.95);
-  padding: 60px 80px;
-  border-radius: 15px;
-  text-align: center;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-  max-width: 600px;
-  width: 90%;
+.landing-panel::after {
+  content: "";
+  position: absolute;
+  top: 10%;
+  right: 0;
+  height: 80%;
+  width: 1px;
+  background: var(--rule);
+}
+
+.landing-panel-inner {
+  max-width: 440px;
   animation: fadeInUp 0.8s ease;
 }
 
-.landing_content h1 {
-  color: #2c3e50;
-  font-size: 42px;
-  font-weight: bold;
-  margin-bottom: 15px;
-  line-height: 1.2;
+.landing-mark {
+  color: var(--forest);
+  margin-bottom: 24px;
 }
 
-/* Divider */
-.divider {
-  width: 60px;
-  height: 4px;
-  background: linear-gradient(90deg, #4CAF50, #45a049);
-  margin: 20px auto;
-  border-radius: 2px;
+.landing-panel-inner .eyebrow {
+  margin-bottom: 18px;
+  display: block;
 }
 
-/* Subtitle */
-.landing_content p {
-  color: #555;
-  font-size: 20px;
+.landing-panel-inner h1 {
+  font-family: var(--font-display);
+  font-weight: 500;
   font-style: italic;
-  margin-bottom: 40px;
-  line-height: 1.5;
+  color: var(--ink);
+  font-size: clamp(36px, 4.4vw, 56px);
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+  margin-bottom: 24px;
 }
 
-/* Get Started Button */
+.landing-copy {
+  color: var(--ink-soft);
+  font-size: 17px;
+  line-height: 1.65;
+  margin-bottom: 40px;
+  max-width: 40ch;
+}
+
+/* Get Started Button — text-led, not a pill */
 .get-started-button {
-  background: linear-gradient(135deg, #4CAF50, #45a049);
-  color: white;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--forest);
+  color: var(--paper-raised);
   border: none;
-  padding: 16px 50px;
-  font-size: 18px;
-  font-weight: bold;
-  border-radius: 50px;
+  padding: 16px 28px;
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  border-radius: 2px;
   cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(76, 175, 80, 0.4);
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.button-arrow {
+  transition: transform 0.25s ease;
 }
 
 .get-started-button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(76, 175, 80, 0.6);
-  background: linear-gradient(135deg, #45a049, #4CAF50);
+  background: var(--forest-deep);
+  transform: translateY(-2px);
+}
+
+.get-started-button:hover .button-arrow {
+  transform: translateX(4px);
 }
 
 .get-started-button:active {
-  transform: translateY(-1px);
+  transform: translateY(0);
+}
+
+/* Right panel — photograph */
+.landing-image {
+  position: relative;
+  padding: 6vw 6vw 6vw 0;
+  display: flex;
+  align-items: center;
+}
+
+.landing-image-frame {
+  position: relative;
+  width: 100%;
+  height: 84vh;
+  overflow: hidden;
+  border: 1px solid var(--rule-strong);
+}
+
+.landing-image-frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(31, 58, 38, 0.12) 0%, rgba(24, 38, 32, 0.38) 100%);
+}
+
+.landing-image-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: saturate(0.92) contrast(1.02);
 }
 
 /* Hide About Us on Landing Page */
@@ -136,7 +146,7 @@ html, body {
   display: none;
   width: 100%;
   min-height: 100vh;
-  background-color: #f0f0f0;
+  background-color: var(--paper);
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.5s ease, transform 0.5s ease;
@@ -152,7 +162,7 @@ html, body {
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(24px);
   }
   to {
     opacity: 1;
@@ -161,49 +171,50 @@ html, body {
 }
 
 /* Responsive Design */
-@media screen and (max-width: 768px) {
-  .landing_content {
-    padding: 40px 30px;
-    max-width: 85%;
+@media screen and (max-width: 900px) {
+  .landing-page {
+    grid-template-columns: 1fr;
   }
 
-  .landing_content h1 {
-    font-size: 32px;
+  .landing-panel::after {
+    display: none;
   }
 
-  .landing_content p {
-    font-size: 18px;
-    margin-bottom: 30px;
+  .landing-panel {
+    padding: 14vw 8vw 6vw;
   }
 
-  .get-started-button {
-    padding: 14px 40px;
-    font-size: 16px;
+  .landing-image {
+    padding: 0 8vw 12vw;
+    order: -1;
+  }
+
+  .landing-image-frame {
+    height: 46vh;
   }
 }
 
 @media screen and (max-width: 480px) {
-  .landing_content {
-    padding: 30px 20px;
-    max-width: 90%;
+  .landing-panel {
+    padding: 16vw 6vw 8vw;
   }
 
-  .landing_content h1 {
-    font-size: 26px;
-  }
-
-  .landing_content p {
+  .landing-copy {
     font-size: 16px;
-    margin-bottom: 25px;
+    margin-bottom: 32px;
   }
 
   .get-started-button {
-    padding: 12px 35px;
-    font-size: 15px;
+    width: 100%;
+    justify-content: center;
+    padding: 15px 20px;
   }
 
-  .divider {
-    width: 50px;
-    height: 3px;
+  .landing-image {
+    padding: 0 6vw 10vw;
+  }
+
+  .landing-image-frame {
+    height: 38vh;
   }
 }

@@ -1,158 +1,132 @@
-/* AboutUs.css - Improved and Responsive */
+/* AboutUs.css — editorial single column, matches catalog design system */
 
 .about-us-container {
   width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 60px 40px;
-  text-align: justify;
   min-height: 100vh;
-  background-color: #f9f9f9;
+  background-color: var(--paper);
+  padding: 72px 24px 100px;
   animation: fadeIn 0.6s ease;
 }
 
-.about-us-heading {
-  font-size: 42px;
-  font-weight: bold;
-  color: #2c3e50;
-  margin-bottom: 30px;
-  text-align: center;
-  border-bottom: 3px solid #4CAF50;
-  padding-bottom: 15px;
-}
-
-.about-us-description {
-  font-size: 26px;
-  color: #4CAF50;
-  font-weight: bold;
-  font-style: italic;
-  margin-bottom: 40px;
-  text-align: center;
-  line-height: 1.5;
-}
-
 .about-us-content {
-  font-size: 18px;
-  line-height: 1.8;
-  color: #555;
-  margin-bottom: 25px;
-  padding: 25px;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+  max-width: 720px;
+  margin: 0 auto;
 }
 
-.about-us-content:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-.about-us-content:first-of-type {
-  border-left: 4px solid #4CAF50;
-}
-
-.about-us-content:last-of-type {
-  background: linear-gradient(135deg, #e8f5e9 0%, #f1f8f4 100%);
-  border-left: 4px solid #4CAF50;
+.about-us-content > h1 {
+  font-family: var(--font-display);
+  font-style: italic;
   font-weight: 500;
+  font-size: clamp(32px, 4vw, 46px);
+  color: var(--ink);
+  margin-bottom: 48px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--rule-strong);
 }
 
-/* Plant logo positioning */
-.plant_logo_right {
-  text-align: right;
-  margin: 20px 0;
+.about-section {
+  margin-bottom: 44px;
 }
 
-.plant_logo_left {
-  text-align: left;
-  margin: 20px 0;
+.about-section h2 {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--forest);
+  margin-bottom: 14px;
 }
 
-.plant_logo_right img,
-.plant_logo_left img {
-  transition: transform 0.3s ease;
+.about-section p {
+  font-size: 17px;
+  line-height: 1.75;
+  color: var(--ink-soft);
 }
 
-.plant_logo_right img:hover,
-.plant_logo_left img:hover {
-  transform: scale(1.1) rotate(5deg);
+.about-section ul {
+  list-style: none;
+  margin-top: 8px;
 }
 
-/* Animation */
+.about-section ul li {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+
+.about-section ul li::before {
+  content: "\2014";
+  position: absolute;
+  left: 0;
+  color: var(--gold-deep);
+}
+
+.about-section ul li strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.mission-section {
+  padding: 36px;
+  background: var(--paper-raised);
+  border-left: 2px solid var(--forest);
+}
+
+.mission-text {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 21px !important;
+  line-height: 1.6 !important;
+  color: var(--ink) !important;
+}
+
+.contact-section {
+  margin-top: 56px;
+  padding-top: 32px;
+  border-top: 1px solid var(--rule);
+}
+
+.contact-section h2 {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--forest);
+  margin-bottom: 14px;
+}
+
+.contact-section p {
+  font-size: 15px;
+  color: var(--ink-soft);
+  line-height: 1.8;
+}
+
+.contact-section strong {
+  color: var(--ink);
+}
+
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Responsive Design */
-@media screen and (max-width: 1024px) {
-  .about-us-container {
-    max-width: 900px;
-    padding: 50px 30px;
-  }
-
-  .about-us-description {
-    font-size: 24px;
-  }
-
-  .about-us-content {
-    font-size: 17px;
-  }
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @media screen and (max-width: 768px) {
   .about-us-container {
-    max-width: 100%;
-    padding: 40px 20px;
+    padding: 48px 20px 72px;
   }
 
-  .about-us-heading {
-    font-size: 32px;
-  }
-
-  .about-us-description {
-    font-size: 20px;
-    margin-bottom: 30px;
-  }
-
-  .about-us-content {
+  .about-section p {
     font-size: 16px;
-    padding: 20px;
-    text-align: left;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .about-us-container {
-    padding: 30px 15px;
   }
 
-  .about-us-heading {
-    font-size: 26px;
-    margin-bottom: 20px;
+  .mission-section {
+    padding: 24px;
   }
 
-  .about-us-description {
-    font-size: 18px;
-    margin-bottom: 25px;
-  }
-
-  .about-us-content {
-    font-size: 15px;
-    padding: 15px;
-    margin-bottom: 20px;
-  }
-
-  .plant_logo_right img,
-  .plant_logo_left img {
-    height: 40px !important;
-    width: 40px !important;
+  .mission-text {
+    font-size: 18px !important;
   }
 }
