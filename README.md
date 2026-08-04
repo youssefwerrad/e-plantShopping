@@ -10,8 +10,22 @@ A fully responsive, modern e-commerce web application for online plant shopping 
 ![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-f7df1e?style=for-the-badge&logo=javascript&logoColor=black)
 ![CSS3](https://img.shields.io/badge/CSS3-Responsive-1572b6?style=for-the-badge&logo=css3&logoColor=white)
 
+## 📝 Project Origin
+
+This project is forked from [Paradise Nursery](https://github.com/ibm-developer-skills-network/e-plantShopping)
+by IBM Developer Skills Network. I extended the original with:
+
+- A full visual redesign implementing a custom "botanical specimen catalog"
+  design system across 9+ files (updated color palette, typography, and
+  component styling)
+- Fixed a CSS grid layout bug affecting the shopping cart display
+
+The sections below describe the app as it stands today, including both the
+original scaffolding and my additions.
+
 ## 📋 Table of Contents
 
+- [Project Origin](#-project-origin)
 - [Overview](#overview)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
@@ -350,7 +364,7 @@ This project is open source and available under the MIT License.
 - Redux team for state management solution
 - Vite team for the blazing fast build tool
 - Unsplash & Pixabay for plant images
-- IBM Developer Skills Network for inspiration
+- IBM Developer Skills Network for the original project (see [Project Origin](#-project-origin))
 
 ## 📊 Project Stats
 
