@@ -10,7 +10,7 @@ A fully responsive, modern e-commerce web application for online plant shopping 
 ![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-f7df1e?style=for-the-badge&logo=javascript&logoColor=black)
 ![CSS3](https://img.shields.io/badge/CSS3-Responsive-1572b6?style=for-the-badge&logo=css3&logoColor=white)
 
-## 📝 Project Origin
+## Project Origin
 
 This project is forked from [Paradise Nursery](https://github.com/ibm-developer-skills-network/e-plantShopping)
 by IBM Developer Skills Network. I extended the original with:
@@ -19,11 +19,12 @@ by IBM Developer Skills Network. I extended the original with:
   design system across 9+ files (updated color palette, typography, and
   component styling)
 - Fixed a CSS grid layout bug affecting the shopping cart display
+- [Add any new feature you're currently working on here]
 
 The sections below describe the app as it stands today, including both the
 original scaffolding and my additions.
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [Project Origin](#-project-origin)
 - [Overview](#overview)
@@ -36,7 +37,7 @@ original scaffolding and my additions.
 - [Deployment](#deployment)
 - [Contributing](#contributing)
 
-## 🎯 Overview
+## Overview
 
 Paradise Nursery is a comprehensive e-commerce platform specializing in house plants. The application provides a seamless shopping experience with features like real-time cart updates, product management, and a fully responsive design that works perfectly on all devices.
 
@@ -48,7 +49,7 @@ Paradise Nursery is a comprehensive e-commerce platform specializing in house pl
 - 💚 Beautiful UI with smooth animations
 - ⚡ Fast performance with Vite build tool
 
-## ✨ Features
+## Features
 
 ### Customer Features
 - **Landing Page** - Elegant welcome screen with brand introduction
@@ -84,7 +85,7 @@ Paradise Nursery is a comprehensive e-commerce platform specializing in house pl
 - **Delete Products** - Remove plants with confirmation
 - **View Inventory** - See all products organized by category
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 ### Frontend Framework & Libraries
 
@@ -142,7 +143,7 @@ Paradise Nursery is a comprehensive e-commerce platform specializing in house pl
 - **Redux Pattern** - Predictable state container
 - **Controlled Components** - Form inputs controlled by React state
 
-## 📦 Installation
+## Installation
 
 ### Prerequisites
 ```bash
@@ -174,7 +175,7 @@ npm run dev
 http://localhost:5173
 ```
 
-## 🚀 Usage
+## Usage
 
 ### Development Commands
 
@@ -199,7 +200,7 @@ npm run lint
 
 No environment variables needed for basic functionality. All data is stored in React state and Redux store.
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 e-plantShopping/
@@ -228,7 +229,7 @@ e-plantShopping/
 └── README.md                 # This file
 ```
 
-## 📸 Screenshots
+## Screenshots
 
 ### Landing Page
 Beautiful welcome screen with greenhouse background and call-to-action.
@@ -245,7 +246,7 @@ Add new plants or remove existing ones with a clean interface.
 ### Mobile View
 Fully responsive design that adapts to any screen size.
 
-## 🌐 Deployment
+## Deployment
 
 ### Deploy to GitHub Pages
 
@@ -285,7 +286,7 @@ npm run deploy
 
 Your site will be live at: `https://YOUR_USERNAME.github.io/e-plantShopping`
 
-## 📱 Responsive Breakpoints
+## Responsive Breakpoints
 
 | Device | Width | Layout |
 |--------|-------|--------|
@@ -295,7 +296,7 @@ Your site will be live at: `https://YOUR_USERNAME.github.io/e-plantShopping`
 | Mobile | 480-768px | 1 product per row |
 | Small | < 480px | 1 product per row |
 
-## 🎨 Design System
+## Design System
 
 ### Colors
 - **Primary**: #4CAF50 (Green)
@@ -315,7 +316,7 @@ Your site will be live at: `https://YOUR_USERNAME.github.io/e-plantShopping`
 - **Mobile**: 10-20px padding
 - **Grid Gap**: 20-50px
 
-## 🔄 State Management
+## State Management
 
 ### Redux Store Structure
 ```javascript
@@ -338,7 +339,7 @@ Your site will be live at: `https://YOUR_USERNAME.github.io/e-plantShopping`
 - `removeItem(name)` - Remove product from cart
 - `updateQuantity({name, quantity})` - Update quantity
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Please follow these steps:
 
@@ -348,17 +349,17 @@ Contributions are welcome! Please follow these steps:
 4. Push to branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 📄 License
+##  License
 
 This project is open source and available under the MIT License.
 
-## 👨‍💻 Author
+## Author
 
 **Youssef Werrad**
 - GitHub: [@youssefwerrad](https://github.com/youssefwerrad)
 - Email: youssefwerrad@gmail.com
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - React team for the amazing framework
 - Redux team for state management solution
@@ -366,7 +367,7 @@ This project is open source and available under the MIT License.
 - Unsplash & Pixabay for plant images
 - IBM Developer Skills Network for the original project (see [Project Origin](#-project-origin))
 
-## 📊 Project Stats
+## Project Stats
 
 - **Components**: 5 main components
 - **Lines of Code**: ~2000+
