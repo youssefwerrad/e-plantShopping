@@ -126,7 +126,7 @@ html {
     flex-direction: column;
     width: 100%;
     max-width: 1240px;
-    margin: 0 auto;
+    margin: 24px auto 0;
     padding: 0 40px;
 }
 
